@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Registros de Atividade Física</title>
+    <script>
+        async function fetchAtividade() {
+            const response = await fetch('http://localhost:8080/atividade/list-atividade');
+            const atividadeList = await response.json();
+            const atividadeListElement = document.getElementById('atividadeList');
+            atividadeListElement.innerHTML = '';
+            atividadeList.forEach(atividade => {
+                let item = document.createElement('li');
+                item.appendChild(document.createTextNode(`Usuário: ${atividade.nomeUsuario}, Data: ${atividade.data}, Tipo de Atividade: ${atividade.tipoAtividade}, Distância: ${atividade.distanciaKm} km, Duração: ${atividade.duracaoMinutos} minutos`));
+                atividadeListElement.appendChild(item);
+            });
+        }
+    </script>
+</head>
+<body onload="fetchAtividade()">
+    <h1>Registros de Atividade Física</h1>
+    <ul id="atividadeList"></ul>
+    <button onclick="window.location.href='index.html'">Voltar</button>
+</body>
+</html>

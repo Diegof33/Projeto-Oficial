@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Consumo de Água Cadastrados</title>
+    <script>
+        async function fetchAgua() {
+            const response = await fetch('http://localhost:8080/agua/list-agua');
+            const aguaList = await response.json();
+            const aguaListElement = document.getElementById('aguaList');
+            aguaListElement.innerHTML = '';
+            aguaList.forEach(agua => {
+                let item = document.createElement('li');
+                item.appendChild(document.createTextNode(`Usuário: ${agua.nomeUsuario}, Horário: ${agua.horarioAgua}, Quantidade: ${agua.quantidadeAgua}L`));
+                aguaListElement.appendChild(item);
+            });
+        }
+    </script>
+</head>
+<body onload="fetchAgua()">
+    <h1>Consumo de Água Cadastrados</h1>
+    <ul id="aguaList"></ul>
+    <button onclick="window.location.href='index.html'">Voltar</button>
+</body>
+</html>

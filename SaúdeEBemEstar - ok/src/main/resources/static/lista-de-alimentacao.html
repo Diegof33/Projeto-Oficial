@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Registros de Alimentação</title>
+    <script>
+        async function fetchAlimentacao() {
+            const response = await fetch('http://localhost:8080/alimentacao/list-alimentacao');
+            const alimentacaoList = await response.json();
+            const alimentacaoListElement = document.getElementById('alimentacaoList');
+            alimentacaoListElement.innerHTML = '';
+            alimentacaoList.forEach(alimentacao => {
+                let item = document.createElement('li');
+                item.appendChild(document.createTextNode(`Usuário: ${alimentacao.nomeUsuario}, Data: ${alimentacao.data}, Tipo de Alimento: ${alimentacao.tipoAlimento}, Calorias: ${alimentacao.quantidadeCalorias}`));
+                alimentacaoListElement.appendChild(item);
+            });
+        }
+    </script>
+</head>
+<body onload="fetchAlimentacao()">
+    <h1>Registros de Alimentação</h1>
+    <ul id="alimentacaoList"></ul>
+    <button onclick="window.location.href='index.html'">Voltar</button>
+</body>
+</html>

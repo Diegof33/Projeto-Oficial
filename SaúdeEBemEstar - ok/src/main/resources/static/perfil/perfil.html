@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Wave</title>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <script src="main.js" defer></script>
+    <script src="perfil.js" defer></script>
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="website icon" type="png" href="imagens/log.png">
+
+    <script>
+      
+    </script>
+
+</head>
+<body onload="fetchAgua(); fetchAlimentacao()">
+
+<header class="header-home-sobre">
+    <div class="cabecalho">
+        <div class="imagem-logo">
+            <img src="imagens/LOGO8png.png" alt="Wellness Wave logo"><h4></h4>
+        </div>
+        <nav class="nav">
+            <ul class="list">
+                <li><a class="list-links" href="../inicio/inicio.html">Inicio</a></li>
+                <li><a class="list-links" href="../relaxamento/relaxamento.html">Dicas de Relaxamento</a></li>
+                <li><a class="list-links" href="../receitas/receitas.html">Dicas de receitas saudáveis</a></li>
+                <li><a class="list-links" href="../exercícios/exercícios.html">Dicas de exercícios</a></li>
+                <li><a class="list-links" href="../atividades/atividades.html">Cronômetro</a></li>
+                <li><a class="list-links" href="../registrar/registrar.html">Registrar Atividades</a></li>
+                <li><a class="list-links" href="../perfil/perfil.html">Regristros</a></li>
+                <li><a class="list-links" href="../index/index.html">Sair</a></li>
+            </ul>
+        </nav>
+        <div class="img-menu">
+            <button class="menu-button"><img class="menu-icon" src="imagens/menu.png" alt="menu"></button>
+        </div>
+    </div>
+    <div class="header-titulo">
+        <div class="titulo">
+            <h1></h1>        
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="atividades-registradas">
+    <section class="section1">
+        <div class="desc1">
+            <div class="img-desc1">
+                <img src="imagens/corrida.png" alt="imagem1">
+            </div>
+            <div class="text-desc">
+                <h2>Atividades Físicas Cadastradas</h2>
+                <table id="tabelaAtividades">
+                    <thead>
+                        <tr>
+                            <th>Atividade</th>
+                            <th>Distância (km)</th>
+                            <th>Duração (minutos)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="atividadeList"></tbody>
+                </table>
+                <div>
+                </div>
+            </div>
+        </div>
+        <div class="desc2">
+            <div class="img-desc2">
+                <img src="imagens/sono.png" alt="imagem2">
+            </div>
+            <div class="text-desc">
+                <h2>Registros de Sono</h2>
+                <table id="tabelaSono">
+                    <thead>
+                        <tr>
+                            <th>Data do Sono</th>
+                            <th>Horas de Sono</th>
+                            <th>Qualidade do Sono</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sonoList"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="desc1">
+            <div class="img-desc1">
+                <img src="imagens/comida.png" alt="imagem1">
+            </div>
+            <div class="text-desc">
+                <h2>Registros de Alimentação</h2>
+                <table id="tabelaAlimentacao">
+                    <thead>
+                        <tr>
+                            <th>Data da Alimentação</th>
+                            <th>Horário da Alimentação</th>
+                            <th>Refeição</th>
+                            <th>Calorias (Kcal)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alimentacaoList"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="desc2">
+            <div class="img-desc2">
+                <img src="imagens/agua.png" alt="imagem2">
+            </div>
+            <div class="text-desc">
+                
+                <h2>Consumo de Água Cadastrados</h2>
+    <table id="tabelaAgua">
+        <thead>
+            <tr>
+                <th>Horário</th>
+                <th>Quantidade de Água (ml)</th>
+            </tr>
+        </thead>
+        <tbody id="aguaList"></tbody>
+    </table>
+</div>
+
+<div>  
+    <ul id="consumoAguaList"></ul>
+    <button onclick="window.location.href='index.html'"></button>
+</div>
+            </div>
+    </section>
+</section>
+
+
+<footer>
+    <div class="footer-content">
+        <div class="links">
+            <a href="https://www.instagram.com/wellnesswaveofc" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>                   
+            <a href="https://whatsapp.com/channel/0029VaezDMN11ulSDKcWKy2g" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>       
+    </div>
+        <p>Projeto desenvolvido por <strong>Diego Fagundes, Ana Laurena e Marcel Oliveira</strong></p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="perfil.js"></script>
+
+</body>
+</html>

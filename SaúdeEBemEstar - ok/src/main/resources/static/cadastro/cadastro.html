@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Wave</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="validar.js" defer></script>
+    <script>
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            const loader = document.getElementById('loader');
+            const submitButton = document.getElementById('submitButton');
+            loader.classList.remove('hidden');
+            submitButton.disabled = true;
+
+            try {
+                const response = await fetch('http://localhost:8080/users/create', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                if (response.status === 201) {
+                    alert('Cadastro feito com sucesso!');
+                    window.location.href = '..//inicio/inicio.html'; // Redireciona para a página principal
+                } else {
+                    alert(result); // Exibe a mensagem de erro do servidor
+                }
+            } catch (error) {
+                alert('Erro ao conectar ao servidor. Tente novamente mais tarde.');
+            } finally {
+                loader.classList.add('hidden');
+                submitButton.disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <style>
+        .hidden { display: none; }
+    </style>
+
+<header class="header-home-login">
+    <div class="cabecalho">
+        <div class="imagem-logo">
+            <img src="imagens/LOGO8png.png" alt="Wellness Wave logo">
+            <h4></h4>
+        </div>
+
+        <nav class="nav">
+            <ul class="list">
+                <li><a class="list-links" href="../index/index.html">Inicio</a></li>
+                <li><a class="list-links" href="../sobre/sobre.html">Sobre</a></li>
+                <li><a id="login-link" href="../login/login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="img-menu">
+            <button class="menu-button"><img class="menu-icon" src="imagens/menu.png" alt="menu"></button>
+        </div>
+    </div>
+
+    <div class="header-titulo">
+        <div class="titulo">
+            <h1>Cadastro</h1>
+        </div>
+    </div>
+</header>
+
+<div class="blur-bg-overlay"></div>
+<div class="form-popup">
+    <div class="form-box login">
+        <div class="form-details">
+        </div>
+        <div class="form-content">
+            <h2>CADASTRO</h2>
+            <form onsubmit="handleSubmit(event)">
+                <div class="input-field">
+                <input type="text" id="username" 
+                name="username" required><br><br>
+                <label for="username">Nome</label>
+                </div>
+                <div class="input-field">
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="email">Email:</label>
+                </div>
+                <div class="input-field">
+                <input type="tel" id="phone" name="phone" required><br><br>
+                <label for="phone">Celular:</label>
+                </div>
+                <div class="input-field">
+                <input type="password" id="password" name="password" required><br><br>
+                <label for="password">Senha:</label>
+                </div>
+                <div class="gender-input">
+                    <label for="gender">Gênero:</label><br>
+                    <input type="radio" id="male" name="gender" value="masculino" required>
+                    <label for="male">Masculino</label><br>
+                    <input type="radio" id="female" name="gender" value="feminino" required>
+                    <label for="female">Feminino</label><br>
+                    <input type="radio" id="other" name="gender" value="outro" required>
+                    <label for="other">Outro</label><br>
+                </div><br>
+                <input type="checkbox" id="terms" name="terms" required>
+                <div class="terms-container">
+                    <label for="terms">Eu concordo com os <a href="termos.html">Termos e Condições</a>.</label><br><br>
+                </div>
+                <button type="submit" id="submitButton">Cadastrar</button>           
+                <div id="loader" class="hidden"></div>
+               
+            </form>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="links">
+            <a href="https://www.instagram.com/wellnesswaveofc" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>                   
+            <a href="https://whatsapp.com/channel/0029VaezDMN11ulSDKcWKy2g" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>      
+        </div>
+        <p>Projeto desenvolvido por <strong>Diego Fagundes, Ana Laurena e Marcel Oliveira</strong></p>
+    </div>
+</footer>
+
+</body>
+</html>

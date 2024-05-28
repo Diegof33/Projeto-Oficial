@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Registros de Sono</title>
+    <script>
+        async function fetchSono() {
+            const response = await fetch('http://localhost:8080/sono/list-sono');
+            const sonoList = await response.json();
+            const sonoListElement = document.getElementById('sonoList');
+            sonoListElement.innerHTML = '';
+            sonoList.forEach(sono => {
+                let item = document.createElement('li');
+                item.appendChild(document.createTextNode(`Usuário: ${sono.nomeUsuario}, Data: ${sono.data}, Horas de Sono: ${sono.horasSono}, Qualidade: ${sono.qualidade}`));
+                sonoListElement.appendChild(item);
+            });
+        }
+    </script>
+</head>
+<body onload="fetchSono()">
+    <h1>Registros de Sono</h1>
+    <ul id="sonoList"></ul>
+    <button onclick="window.location.href='index.html'">Voltar</button>
+</body>
+</html>

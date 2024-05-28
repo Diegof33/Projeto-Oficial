@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-wellnesswaveApplication<wellnesswave>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.wellnesswave.wellnesswave.wellnesswaveApplication",
+            "projectName": "wellnesswave",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
