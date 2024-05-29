@@ -260,8 +260,3 @@ form button:hover {
      margin-left: 18px; 
 }
 
-.error-message {
-    margin-top: 10px; /* Ajuste conforme necessário para o espaçamento desejado */
-    color: red; /* Cor do texto da mensagem de erro */
-    font-size: 14px; /* Tamanho da fonte da mensagem de erro */
-}

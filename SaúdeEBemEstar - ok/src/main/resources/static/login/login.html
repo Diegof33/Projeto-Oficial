@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Wellness wave</title>
+        <title>Login Wellness wave</title>
     
         <link rel="website icon" type="png"
         href="imagens/log.png">
@@ -11,45 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellness wave</title>  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
     <script src="main.js" defer></script>
     <script src="validar.js" defer></script>
-    <script src="login.java" defer></script>
-    <script>
-        async function handleLogin(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData.entries());
 
-            const loader = document.getElementById('loader');
-            const loginButton = document.getElementById('loginButton');
-            loader.classList.remove('hidden');
-            loginButton.disabled = true;
-
-            try {
-                const response = await fetch('http://localhost:8080/users/authenticate', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-                const result = await response.text(); // Capturando texto puro, assumindo resposta como texto plano
-                if (response.ok) {
-                    alert('Login bem-sucedido!');
-                    window.location.href = '../inicio/inicio.html'; // Redireciona para a página principal ou dashboard
-                } else {
-                    alert(result); // Exibe a mensagem de erro do servidor
-                }
-            } catch (error) {
-                alert('Erro ao conectar ao servidor. Tente novamente mais tarde.');
-            } finally {
-                loader.classList.add('hidden');
-                loginButton.disabled = false;
-            }
-        }
-    </script>
 </head>
 <body>
     <style>
@@ -97,17 +63,18 @@
                 <input type="password" id="password" name="password" required><br><br>
                 <label for="password">Senha</label>
                 </div>
-                <a href="#" class="forgot-pass-link">Esqueceu sua senha?</a>
+                <a href="#" class="forgot-pass-link">Esqueceu sua senha?</a>                
                 <button type="submit" id="loginButton">Entrar</button>
             </form>
-            <div id="loader" class="hidden">Login bem-sucedido!</div>
+            <div id="loader" class="hidden"></div>
             <div class="bottom-link">
                 Não tem uma conta?
                 <a href="../cadastro/cadastro.html" id="signup-link">Cadastre-se</a>
+                <div id="messageLogin" class="message"></div>
             </div>
         </div>
     </div>
-    
+   
         </div>
     </div>
 </div>

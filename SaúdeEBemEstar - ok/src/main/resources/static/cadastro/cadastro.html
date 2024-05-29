@@ -3,46 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness Wave</title>  
+    <head>
+        <title>Cadastro Wellness wave</title>
+    
+        <link rel="website icon" type="png"
+        href="imagens/log.png">
+    </head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="cadastro.css">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <script src="validar.js" defer></script>
-    <script>
-        async function handleSubmit(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData.entries());
-
-            const loader = document.getElementById('loader');
-            const submitButton = document.getElementById('submitButton');
-            loader.classList.remove('hidden');
-            submitButton.disabled = true;
-
-            try {
-                const response = await fetch('http://localhost:8080/users/create', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-                const result = await response.json();
-                if (response.status === 201) {
-                    alert('Cadastro feito com sucesso!');
-                    window.location.href = '..//inicio/inicio.html'; // Redireciona para a página principal
-                } else {
-                    alert(result); // Exibe a mensagem de erro do servidor
-                }
-            } catch (error) {
-                alert('Erro ao conectar ao servidor. Tente novamente mais tarde.');
-            } finally {
-                loader.classList.add('hidden');
-                submitButton.disabled = false;
-            }
-        }
-    </script>
 </head>
 <body>
     <style>
@@ -115,6 +86,8 @@
                 </div>
                 <button type="submit" id="submitButton">Cadastrar</button>           
                 <div id="loader" class="hidden"></div>
+                <div id="mensagemCadastro" class="message"></div>
+                </form>
                
             </form>
             
