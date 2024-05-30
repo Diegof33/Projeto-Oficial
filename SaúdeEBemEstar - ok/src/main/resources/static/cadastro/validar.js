@@ -24,7 +24,7 @@ async function handleSubmit(event) {
             mensagemCadastro.className = 'message success';
             mensagemCadastro.textContent = 'Cadastro feito com sucesso!';
             setTimeout(() => {
-                window.location.href = '../inicio/inicio.html'; // Redireciona para a página principal
+                window.location.href = '../login/login.html'; // Redireciona para a página principal
             }, 1000); // Atraso de 1 segundo
         } else {
             mensagemCadastro.className = 'message error';

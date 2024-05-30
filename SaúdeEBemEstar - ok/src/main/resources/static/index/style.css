@@ -30,7 +30,7 @@ body {
     background: url(imagens/index.png) no-repeat center;
     position: relative;   
     background-size: contain;
-    margin-bottom: 3rem;
+    margin-bottom: -3rem;
 }
 
 .header-home::before {
@@ -81,9 +81,10 @@ body {
 }
 
 .list-links {
-    color: #ff88009a;
+    color: #ff8800;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'font-bold', sans-serif;
 }
 
 .list-links::after {
@@ -141,28 +142,22 @@ body {
     margin-top: 8px;
     
 }
-
-
-.titulo p2 {
+.subtitulo {
     font-family: 'font-bold', sans-serif;
-    font-size: 1.5rem;
+    color: #ff8800fa;
+    margin-top: -25px; 
+    padding: -16px;
+    text-align: center;
+    font-size: 1.7rem;
+    
 }
+
 
 .titulo h5 {
     font-family: 'font-bold', sans-serif;
     font-size: 4.7rem;
     color: #ff0000;
     margin-bottom: 2px;
-}
-
-.titulo p {
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
-    
-}
-.titulo p2 {
-    color: #ff8800;
-    
 }
 
 
@@ -199,15 +194,31 @@ body {
     font-size: 2.7rem;
     font-family: 'font-bold', sans-serif;
     margin-bottom: 10px;
+    color: #ff8800
+}
+
+.text-desc h6 {
+    font-size: 2.7rem;
+    font-family: 'font-bold', sans-serif;
+    margin-bottom: 10px;
+    color: #ff8800
 }
 
 .text-desc p {
-    color: #474849;
+    color: #000000;
     margin-bottom: 12px;
+    font-family: 'font-bold', sans-serif;
+}
+
+
+.text-desc p2 {
+    color: #000000;
+    margin-bottom: 12px;
+    font-family: 'font-bold', sans-serif;
 }
 
 .button-desc {
-    padding: 15px 20px;
+    padding: 10px 20px;
     font-family: 'font-padrão', sans-serif;
     font-size: 1rem;
     background-color: #ff8800;

@@ -73,6 +73,7 @@ body {
     color: #cc00ff85;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'font-bold', sans-serif;
 }
 
 .list-links::after {

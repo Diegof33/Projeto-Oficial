@@ -66,6 +66,7 @@ body {
     color: #7e2727;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'font-bold', sans-serif;
 }
 
 .list-links::after {

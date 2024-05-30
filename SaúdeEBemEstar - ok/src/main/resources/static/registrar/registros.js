@@ -25,10 +25,10 @@ async function handleSubmitAgua(event) {
             messageDiv.style.color = 'BLUE'; // Define a cor da mensagem
             messageDiv.style.display = 'block'; // Exibe a mensagem
 
-            // Adiciona um atraso de 2 segundos antes de redirecionar para a página principal
+            // Adiciona um atraso de 1 segundos antes de redirecionar para a página principal
             setTimeout(() => {
                 window.location.href = '../registrar/registrar.html';
-            }, 2000); // 2000 milissegundos = 2 segundos
+            }, 1000); // 1000 milissegundos = 1 segundos
         } else {
             messageDiv.textContent = result.message || 'Erro ao criar o registro de consumo de água'; // Define a mensagem de erro
             messageDiv.style.color = 'red'; // Define a cor da mensagem
@@ -72,10 +72,10 @@ async function handleSubmitAtividade(event) {
             messageDiv.style.color = 'BLUE'; // Define a cor da mensagem
             messageDiv.style.display = 'block'; // Exibe a mensagem
 
-            // Adiciona um atraso de 2 segundos antes de redirecionar para a página principal
+            // Adiciona um atraso de 1 segundos antes de redirecionar para a página principal
             setTimeout(() => {
                 window.location.href = '../registrar/registrar.html';
-            }, 2000); // 2000 milissegundos = 2 segundos
+            }, 1000); // 1000 milissegundos = 1 segundos
         } else {
             messageDiv.textContent = result.message || 'Erro ao criar o registro de atividade física'; // Define a mensagem de erro
             messageDiv.style.color = 'red'; // Define a cor da mensagem
@@ -121,7 +121,7 @@ async function handleSubmitAlimentacao(event) {
             // Adiciona um atraso de 2 segundos antes de redirecionar para a página principal
             setTimeout(() => {
                 window.location.href = '../registrar/registrar.html';
-            }, 2000); // 2000 milissegundos = 2 segundos
+            }, 1000); // 1000 milissegundos = 1 segundos
         } else {
             messageDiv.textContent = result.message || 'Erro ao criar o registro de alimentação'; // Define a mensagem de erro
             messageDiv.style.color = 'red'; // Define a cor da mensagem
@@ -166,7 +166,7 @@ async function handleSubmitSono(event) {
 
             setTimeout(() => {
                 window.location.href = '../registrar/registrar.html';
-            }, 2000); // 2 seconds delay before redirecting
+            }, 1000); // 1 seconds delay before redirecting
         } else {
             messageDiv.textContent = result.message || 'Erro ao criar o registro de sono';
             messageDiv.style.color = 'red';

@@ -30,7 +30,7 @@ body {
     background: url(imagens/sobre1.png) no-repeat center;
     position: relative;   
     background-size: contain;
-    margin-bottom: 3rem;
+    margin-bottom: -5rem;
 }
 
 
@@ -74,6 +74,7 @@ body {
     color: #e61414;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'font-bold', sans-serif;
 }
 
 .list-links::after {
@@ -192,8 +193,10 @@ body {
 }
 
 .text-desc p {
-    color: #474849;
+    color: #000000;
     margin-bottom: 12px;
+    font-size: 0.9rem;
+    font-family: 'font-bold', sans-serif;
 }
 
 .button-desc {

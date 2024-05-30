@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha Wellness Wave</title>
+    <link rel="icon" type="image/png" href="imagens/log.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="senha.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="validar.js" defer></script>
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+<header class="header-home-login">
+    <div class="cabecalho">
+        <div class="imagem-logo">
+            <img src="imagens/LOGO8png.png" alt="Wellness Wave logo">
+        </div>
+        <nav class="nav">
+            <ul class="list">
+                <li><a class="list-links" href="../index/index.html">Inicio</a></li>
+                <li><a class="list-links" href="../sobre/sobre.html">Sobre nós</a></li>
+                <li><a id="login-link" href="../login/login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="img-menu">
+            <button class="menu-button"><img class="menu-icon" src="imagens/menu.png" alt="menu"></button>
+        </div>
+    </div>
+    <div class="header-titulo">
+        <div class="titulo">
+            <h1></h1>
+        </div>
+    </div>
+</header>
+<div class="blur-bg-overlay"></div>
+<div class="form-popup">
+    <span class="close-btn">Fecha</span>
+    <div class="form-box login">
+        <div class="form-details">
+        </div>
+        <div class="form-content">
+            <h2>Redefina sua senha</h2>
+            <p>Insira seu endereço de e-mail e lhe enviaremos instruções para redefinir sua senha.</p>
+            <form onsubmit="handlePasswordReset(event)">
+                <div class="input-field">               
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="email">Email</label>
+                </div>                        
+                <button type="submit" id="resetButton">Enviar</button>
+            </form>
+            <div id="loader" class="hidden"></div>
+            <div class="bottom-link">
+                Lembrou sua senha?
+                <a href="../login/login.html" id="login-link">Faça Login</a>
+                <div id="messageLogin" class="message"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <div class="links">
+            <a href="https://www.instagram.com/wellnesswaveofc" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>                   
+            <a href="https://whatsapp.com/channel/0029VaezDMN11ulSDKcWKy2g" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>      
+        </div>
+        <p>Projeto desenvolvido por <strong>Diego Fagundes, Ana Laurena e Marcel Oliveira</strong></p>
+    </div>
+</footer>
+</body>
+</html>

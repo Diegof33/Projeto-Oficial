@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellness wave</title>  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <script src="validar.js" defer></script>
 
@@ -32,7 +32,7 @@
         <nav class="nav">
             <ul class="list">
                 <li><a class="list-links" href="../index/index.html">Inicio</a></li>
-                <li><a class="list-links" href="../sobre/sobre.html">Sobre</a></li>
+                <li><a class="list-links" href="../sobre/sobre.html">Sobre nós</a></li>
                 <li><a id="login-link" href="../login/login.html">Login</a></li>
             </ul>
         </nav>
@@ -49,6 +49,7 @@
 </header>
 <div class="blur-bg-overlay"></div>
 <div class="form-popup">
+    <span class="close-btn">Fecha</span>
     <div class="form-box login">
         <div class="form-details">
         </div>
@@ -63,7 +64,7 @@
                 <input type="password" id="password" name="password" required><br><br>
                 <label for="password">Senha</label>
                 </div>
-                <a href="#" class="forgot-pass-link">Esqueceu sua senha?</a>                
+                <a href="../senha/senha.html" class="forgot-pass-link">Esqueceu sua senha?</a>
                 <button type="submit" id="loginButton">Entrar</button>
             </form>
             <div id="loader" class="hidden"></div>

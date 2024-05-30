@@ -74,6 +74,7 @@ body {
     color: #3e881b;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'font-bold', sans-serif;
 }
 
 .list-links::after {

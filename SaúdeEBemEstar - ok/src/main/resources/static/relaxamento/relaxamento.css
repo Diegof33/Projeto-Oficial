@@ -72,6 +72,7 @@ body {
     color: #3e881b;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'font-bold', sans-serif;
 }
 
 .list-links::after {
@@ -142,16 +143,13 @@ body {
     margin-bottom: 2px;
 }
 
-.titulo p {
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
-    margin-bottom: 16px;
-}
-.titulo p2 {
-    color: rgb(255, 0, 0);
-    
-}
 
+.text-desc h2 {
+    font-size: 2.7rem;
+    font-family: 'font-bold', sans-serif;
+    margin-bottom: 10px;
+    color: #5ce21f
+}
 
 
 @keyframes animate-outline {
@@ -189,8 +187,9 @@ body {
 }
 
 .text-desc p {
-    color: #474849;
+    color: #000000;
     margin-bottom: 12px;
+    font-family: 'font-bold', sans-serif;
 }
 
 .button-desc {

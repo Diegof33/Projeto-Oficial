@@ -30,7 +30,7 @@
         <nav class="nav">
             <ul class="list">
                 <li><a class="list-links" href="../index/index.html">Inicio</a></li>
-                <li><a class="list-links" href="../sobre/sobre.html">Sobre</a></li>
+                <li><a class="list-links" href="../sobre/sobre.html">Sobre nós</a></li>
                 <li><a id="login-link" href="../login/login.html">Login</a></li>
             </ul>
         </nav>
@@ -48,6 +48,7 @@
 
 <div class="blur-bg-overlay"></div>
 <div class="form-popup">
+    <span class="close-btn">Fecha</span>
     <div class="form-box login">
         <div class="form-details">
         </div>
@@ -61,18 +62,18 @@
                 </div>
                 <div class="input-field">
                 <input type="email" id="email" name="email" required><br><br>
-                <label for="email">Email:</label>
+                <label for="email">Email</label>
                 </div>
                 <div class="input-field">
                 <input type="tel" id="phone" name="phone" required><br><br>
-                <label for="phone">Celular:</label>
+                <label for="phone">Celular</label>
                 </div>
                 <div class="input-field">
                 <input type="password" id="password" name="password" required><br><br>
-                <label for="password">Senha:</label>
+                <label for="password">Senha</label>
                 </div>
                 <div class="gender-input">
-                    <label for="gender">Gênero:</label><br>
+                    <label for="gender">Gênero</label><br>
                     <input type="radio" id="male" name="gender" value="masculino" required>
                     <label for="male">Masculino</label><br>
                     <input type="radio" id="female" name="gender" value="feminino" required>
@@ -82,15 +83,16 @@
                 </div><br>
                 <input type="checkbox" id="terms" name="terms" required>
                 <div class="terms-container">
-                    <label for="terms">Eu concordo com os <a href="termos.html">Termos e Condições</a>.</label><br><br>
+                    <label for="terms">Eu concordo com os <a href="../termos/termos.html">Termos e Condições</a>.</label><br><br>
                 </div>
                 <button type="submit" id="submitButton">Cadastrar</button>           
                 <div id="loader" class="hidden"></div>
+                <div class="bottom-link">
+                    Já tem um conta?
+                    <a href="../login/login.html" id="signup-link">Faça Login</a>
                 <div id="mensagemCadastro" class="message"></div>
-                </form>
-               
+                </form>             
             </form>
-            
             </div>
         </div>
     </div>

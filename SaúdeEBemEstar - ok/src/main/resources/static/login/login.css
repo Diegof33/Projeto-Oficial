@@ -123,14 +123,6 @@
     background-size: cover;
 }
 
-.signup .form-details {
-    padding: 0 30px;
-    background: url("imagens/fff.png"); 
-    background-position: center;
-    background-size: cover;
-}
-
-
 .form-box .form-content {
     width: 100%;
     padding: 35px;
@@ -214,12 +206,12 @@ form button {
     border-radius: 3px;
     cursor: pointer;
     margin: 25px 0;
-    background: #ff8800;
+    background: #7e2727;
     transition: 0.2s ease;
 }
 
 form button:hover {
-    background: #ff880077; 
+    background: #8f1b1b; 
 }
 
 

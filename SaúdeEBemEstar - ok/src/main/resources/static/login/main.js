@@ -29,40 +29,22 @@ function openMenu() {
     blurOverlay.classList.toggle('show-popup');
 }
 
-// Função para fechar o menu de navegação e o formulário popup
-function closeMenu() {
-    navbarList.classList.remove('show-menu');
+// Função para fechar o formulário popup
+function closePopup() {
+    formPopup.style.display = 'none'; // Oculta o formulário popup
     blurOverlay.classList.remove('show-popup'); // Remove a classe de transparência
-    formPopup.style.display = 'none';
 }
 
-// Função para redirecionar para a seção de cadastro
-function redirectToSignup() {
-    loginForm.style.display = 'none'; // Oculta o formulário de login
-    signupForm.style.display = 'flex'; // Exibe o formulário de cadastro
-    formPopup.style.display = 'block'; // Exibe o formulário popup
-    blurOverlay.classList.add('show-popup'); // Adiciona a classe de transparência
-}
+// Adiciona evento ao botão de fechar
+closeButton.addEventListener('click', closePopup);
 
-// Função para redirecionar para a seção de login
-function redirectToLogin() {
-    loginForm.style.display = 'flex'; // Exibe o formulário de login
-    signupForm.style.display = 'none'; // Oculta o formulário de cadastro
-    formPopup.style.display = 'block'; // Exibe o formulário popup
-    blurOverlay.classList.add('show-popup'); // Adiciona a classe de transparência
-}
-
-
-// Adiciona evento ao botão "Cadastre-se" para redirecionar para a seção de cadastro
-signupLink.addEventListener('click', redirectToSignup);
-
-// Adiciona evento ao botão de login para redirecionar para a seção de login
-loginBtn.addEventListener('click', redirectToLogin);
-
+// Adiciona evento ao clique fora do formulário popup para fechar
 window.addEventListener('click', function(event) {
-    if (event.target === formPopup || event.target === closeButton) {
-        closeMenu();
+    if (event.target === blurOverlay) {
+        closePopup();
     }
-
-    
 });
+
+
+
+
