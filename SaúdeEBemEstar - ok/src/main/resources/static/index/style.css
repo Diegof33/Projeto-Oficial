@@ -27,20 +27,22 @@ body {
 }
 
 .header-home {
-    background: url(imagens/index.png) no-repeat center;
+    
     position: relative;   
     background-size: contain;
     margin-bottom: -3rem;
+     
 }
 
 .header-home::before {
+    background: url(imagens/index.png) no-repeat center;
     content: "";
-    background-size: cover;   
+    background-size: contain;  
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top:-68px;
+    left: 243px;
+    right: 292px;
+    bottom: 13px;
     z-index: -1; 
 }
 

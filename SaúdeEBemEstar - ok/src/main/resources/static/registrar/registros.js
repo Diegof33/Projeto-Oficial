@@ -22,7 +22,7 @@ async function handleSubmitAgua(event) {
         const result = await response.json();
         if (response.status === 201) {
             messageDiv.textContent = 'Registro de consumo de água criado com sucesso!'; // Define a mensagem de sucesso
-            messageDiv.style.color = 'BLUE'; // Define a cor da mensagem
+            messageDiv.style.color = 'white'; // Define a cor da mensagem
             messageDiv.style.display = 'block'; // Exibe a mensagem
 
             // Adiciona um atraso de 1 segundos antes de redirecionar para a página principal
@@ -31,12 +31,12 @@ async function handleSubmitAgua(event) {
             }, 1000); // 1000 milissegundos = 1 segundos
         } else {
             messageDiv.textContent = result.message || 'Erro ao criar o registro de consumo de água'; // Define a mensagem de erro
-            messageDiv.style.color = 'red'; // Define a cor da mensagem
+            messageDiv.style.color = 'white'; // Define a cor da mensagem
             messageDiv.style.display = 'block'; // Exibe a mensagem
         }
     } catch (error) {
         messageDiv.textContent = 'Erro ao conectar ao servidor. Tente novamente mais tarde.'; // Define a mensagem de erro de conexão
-        messageDiv.style.color = 'red'; // Define a cor da mensagem
+        messageDiv.style.color = 'white'; // Define a cor da mensagem
         messageDiv.style.display = 'block'; // Exibe a mensagem
     } finally {
         loader.classList.add('hidden');
@@ -69,7 +69,7 @@ async function handleSubmitAtividade(event) {
         const result = await response.json();
         if (response.status === 201) {
             messageDiv.textContent = 'Registro de atividade física criado com sucesso!'; // Define a mensagem de sucesso
-            messageDiv.style.color = 'BLUE'; // Define a cor da mensagem
+            messageDiv.style.color = 'white'; // Define a cor da mensagem
             messageDiv.style.display = 'block'; // Exibe a mensagem
 
             // Adiciona um atraso de 1 segundos antes de redirecionar para a página principal
@@ -78,12 +78,12 @@ async function handleSubmitAtividade(event) {
             }, 1000); // 1000 milissegundos = 1 segundos
         } else {
             messageDiv.textContent = result.message || 'Erro ao criar o registro de atividade física'; // Define a mensagem de erro
-            messageDiv.style.color = 'red'; // Define a cor da mensagem
+            messageDiv.style.color = 'white'; // Define a cor da mensagem
             messageDiv.style.display = 'block'; // Exibe a mensagem
         }
     } catch (error) {
         messageDiv.textContent = 'Erro ao conectar ao servidor. Tente novamente mais tarde.'; // Define a mensagem de erro de conexão
-        messageDiv.style.color = 'red'; // Define a cor da mensagem
+        messageDiv.style.color = 'white'; // Define a cor da mensagem
         messageDiv.style.display = 'block'; // Exibe a mensagem
     } finally {
         loader.classList.add('hidden');
@@ -115,7 +115,7 @@ async function handleSubmitAlimentacao(event) {
         const result = await response.json();
         if (response.status === 201) {
             messageDiv.textContent = 'Registro de alimentação criado com sucesso!'; // Define a mensagem de sucesso
-            messageDiv.style.color = 'blue'; // Define a cor da mensagem
+            messageDiv.style.color = 'white'; // Define a cor da mensagem
             messageDiv.style.display = 'block'; // Exibe a mensagem
 
             // Adiciona um atraso de 2 segundos antes de redirecionar para a página principal
@@ -124,12 +124,12 @@ async function handleSubmitAlimentacao(event) {
             }, 1000); // 1000 milissegundos = 1 segundos
         } else {
             messageDiv.textContent = result.message || 'Erro ao criar o registro de alimentação'; // Define a mensagem de erro
-            messageDiv.style.color = 'red'; // Define a cor da mensagem
+            messageDiv.style.color = 'white'; // Define a cor da mensagem
             messageDiv.style.display = 'block'; // Exibe a mensagem
         }
     } catch (error) {
         messageDiv.textContent = 'Erro ao conectar ao servidor. Tente novamente mais tarde.'; // Define a mensagem de erro de conexão
-        messageDiv.style.color = 'red'; // Define a cor da mensagem
+        messageDiv.style.color = 'white'; // Define a cor da mensagem
         messageDiv.style.display = 'block'; // Exibe a mensagem
     } finally {
         loader.classList.add('hidden');
@@ -161,7 +161,7 @@ async function handleSubmitSono(event) {
         const result = await response.json();
         if (response.status === 201) {
             messageDiv.textContent = 'Registro de sono criado com sucesso!';
-            messageDiv.style.color = 'blue';
+            messageDiv.style.color = 'white';
             messageDiv.style.display = 'block';
 
             setTimeout(() => {
@@ -169,12 +169,12 @@ async function handleSubmitSono(event) {
             }, 1000); // 1 seconds delay before redirecting
         } else {
             messageDiv.textContent = result.message || 'Erro ao criar o registro de sono';
-            messageDiv.style.color = 'red';
+            messageDiv.style.color = 'white';
             messageDiv.style.display = 'block';
         }
     } catch (error) {
         messageDiv.textContent = 'Erro ao conectar ao servidor. Tente novamente mais tarde.';
-        messageDiv.style.color = 'red';
+        messageDiv.style.color = 'white';
         messageDiv.style.display = 'block';
     } finally {
         loader.classList.add('hidden');

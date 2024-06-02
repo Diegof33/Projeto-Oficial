@@ -652,7 +652,7 @@ footer {
 
 
 #submitButton {
-    background-color: #0091d4; /* cor de fundo verde */
+    background-color: #0091d4; 
     color: white; /* cor do texto branco */
     padding: 10px 20px; /* preenchimento interno */
     font-size: 16px; /* tamanho da fonte */
@@ -662,7 +662,7 @@ footer {
 }
 
 #submitButton:hover {
-    background-color: #135b7c; /* cor de fundo verde mais escura no hover */
+    background-color: #135b7c; 
 }
 
 
@@ -708,5 +708,53 @@ br {
 #message {
     display: none; /* Inicia oculto */
     margin-top: 10px; /* Espaçamento do topo */
+    
+}
+ 
+#messageSono {
+    display: none; /* Inicia oculto */
+    margin-top: 10px; /* Espaçamento do topo */
+    background-color: #0091d4; 
+    color: #ffffff; /* cor do texto branco */
+    padding: 10px 20px; /* preenchimento interno */
+    font-size: 16px; /* tamanho da fonte */
+    border: none; /* sem borda */
+    cursor: pointer; /* cursor ao passar */
+    border-radius: 5px; /* bordas arredondadas */
 }
 
+#messageAtividade {
+    display: none; 
+    margin-top: 10px; 
+    background-color: #0091d4; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+
+#messageAlimentacao {
+    display: none; 
+    margin-top: 10px; 
+    background-color: #0091d4; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px;  
+}
+
+#messageAgua {
+    display: none; 
+    margin-top: 10px; 
+    background-color: #0091d4; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px;   
+}

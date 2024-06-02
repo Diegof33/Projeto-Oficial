@@ -488,3 +488,16 @@ footer {
     color: #a94442;
     border: 1px solid #a94442;
 }
+
+#loader {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #dff0d8;
+    color: #763c3c;
+    border: 1px solid #763c3c;
+}
